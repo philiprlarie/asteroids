@@ -18,8 +18,12 @@
     <script src="lib/gameView.js"></script>
 
 
-    <div class="score"></div>
-    <canvas id="game-canvas" width="1000px" height="700px"></canvas>
+    <div id="score"></div>
+    <div id="game-screen">
+      <div class="game-over-message"></div>
+      <canvas id="game-canvas" width="1000px" height="700px"></canvas>
+
+    </div>
 
     <script>
       var canvasEl = document.getElementById("game-canvas");

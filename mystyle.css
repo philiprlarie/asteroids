@@ -1,5 +1,19 @@
-.score {
+#score {
   background: black;
   color: white;
   font-size: 40px;
+}
+
+.game-over-message {
+  position: absolute;
+  background: black;
+  color: white;
+  top: 50%;
+  right: 50%;
+}
+
+#game-screen {
+  position: relative;
+  width: 1000px;
+  height: 700px;
 }
