@@ -48,7 +48,7 @@
 
   Ship.prototype.draw = function (ctx) {
     var shipImg = new Image();
-    shipImg.src = './lib/pics/Mother2c.png';
+    shipImg.src = './images/Mother2c.png';
 
     ctx.save();
     ctx.translate(this.pos[0], this.pos[1]);

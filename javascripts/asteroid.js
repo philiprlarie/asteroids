@@ -30,9 +30,9 @@
   Asteroid.prototype.draw = function (ctx) {
     var asteroidImg = new Image();
     if (this.radius === Asteroid.BIG_RADIUS) {
-      asteroidImg.src = './lib/pics/big_rock.png';
+      asteroidImg.src = './images/big_rock.png';
     } else {
-      asteroidImg.src = './lib/pics/small_rock.png';
+      asteroidImg.src = './images/small_rock.png';
     }
 
     this.faceDir += this.rotationRate;
