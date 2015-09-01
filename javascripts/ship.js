@@ -31,7 +31,7 @@
   };
 
   Ship.prototype.turn = function (dir) {
-    this.faceDir += dir * 2*3.14/60;
+    this.faceDir += 0.5 * dir * 2*3.14/60;
   };
 
   Ship.prototype.fireBullet = function () {

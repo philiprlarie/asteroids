@@ -1,16 +1,36 @@
-#score {
-  background: black;
-  color: white;
-  font-size: 40px;
+header {
+  margin-top: 30px;
+  background-color: black;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+body {
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #b5e853;
+  background: #151515 url("./images/bkg.png") 0 0;
   text-align: center;
 }
 
+#score {
+  background: black;
+  font-size: 40px;
+}
+
 .game-over-message {
+  font-size: 40px;
   position: absolute;
   background: black;
-  color: white;
   top: 50%;
-  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  border-radius: 20px;
+  color: #b5e853;
+}
+
+#game-over {
+  margin: 20px;
 }
 
 #game-screen {
@@ -18,4 +38,15 @@
   width: 1000px;
   height: 700px;
   margin: 50px auto;
+}
+
+#replay {
+  margin: 30px;
+  background-color: #b5e853;
+  color: black;
+  border-radius: 20px;
+}
+
+#replay:hover {
+  cursor: pointer;
 }

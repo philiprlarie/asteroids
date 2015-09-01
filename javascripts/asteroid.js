@@ -19,8 +19,8 @@
     this.rotationRate =  0.05 * Asteroids.Utils.normalDist();
   };
 
-  Asteroid.BIG_RADIUS = 30;
-  Asteroid.SMALL_RADIUS = 20;
+  Asteroid.BIG_RADIUS = 60;
+  Asteroid.SMALL_RADIUS = 40;
 
   Asteroids.Utils.inherits(Asteroids.Asteroid, Asteroids.MovingObject);
 
@@ -47,9 +47,9 @@
     ctx.rotate(this.faceDir);
 
     if (this.radius === Asteroid.BIG_RADIUS) {
-      ctx.drawImage(asteroidImg, -30, -30, 60, 60);
+      ctx.drawImage(asteroidImg, -60, -60, 120, 120);
     } else {
-      ctx.drawImage(asteroidImg, -20, -20, 40, 40);
+      ctx.drawImage(asteroidImg, -40, -40, 80, 80);
     }
     ctx.restore();
   };

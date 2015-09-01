@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Asteroids</title>
+    <title>Blasteroids</title>
     <link rel="stylesheet" type="text/css" href="asteroids.css">
   </head>
   <body>
@@ -16,12 +16,22 @@
     <script src="javascripts/game.js"></script>
     <script src="javascripts/gameView.js"></script>
 
+    <header>
+      <h1>Blasteroids!</h1>
+      <h3>by Philip Larie</h3>
+    </header>
 
-    <div id="score"></div>
     <div id="game-screen">
+      <div class="instructions">
+        Fire: "Return/Enter", Thruster: "W", Turn Right "D", Turn Left: "A", Pause: "esc"
+      </div>
+      <br/>
+      <div id="score-bar">
+        <div id="score"></div>
+        <div id="round"></div>
+      </div>
       <div class="game-over-message"></div>
       <canvas id="game-canvas" width="1000px" height="700px"></canvas>
-
     </div>
 
     <script>

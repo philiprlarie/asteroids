@@ -36,7 +36,7 @@
 
   Game.prototype.endGame = function() {
     this.gameOver = true;
-    $('.game-over-message').html("Game Over");
+    $('.game-over-message').html("<div id='game-over'>Game Over</div>");
     $('.game-over-message').append("<div id='replay' class='btn'>Replay</div>");
     $('#replay').on('click', Asteroids.replay);
   };
