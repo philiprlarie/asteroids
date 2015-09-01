@@ -9,8 +9,9 @@
       'vel': [0, 0],
       'radius': Ship.RADIUS,
       'game': shipParams.game,
-      'faceDir': Math.PI/2
+      'faceDir': Math.PI/2,
     });
+    this.reloading = false; // no firing while reloading is true
   };
 
   Ship.RADIUS = 20;
@@ -34,16 +35,25 @@
   };
 
   Ship.prototype.fireBullet = function () {
-    var bulletParams = {
-      'pos': this.pos,
-      'vel': [
-        10 * Math.cos(this.faceDir),
-        10 * Math.sin(this.faceDir)
-      ],
-        'game': this.game
-      };
-    var bullet = new Asteroids.Bullet(bulletParams);
-    this.game.add(bullet);
+    if (this.reloading) {
+      return 'reloading';
+    } else {
+      var bulletParams = {
+        'pos': this.pos,
+        'vel': [
+          10 * Math.cos(this.faceDir),
+          10 * Math.sin(this.faceDir)
+        ],
+          'game': this.game
+        };
+      var bullet = new Asteroids.Bullet(bulletParams);
+      this.game.add(bullet);
+
+      this.reloading = true;
+      window.setTimeout(function () {
+        this.reloading = false;
+      }.bind(this), 200);
+    }
   };
 
   Ship.prototype.draw = function (ctx) {

@@ -49,5 +49,4 @@
       if (keysBeingPressed[32]) { game.ship.fireBullet(); }
     }
   };
-
 })();
