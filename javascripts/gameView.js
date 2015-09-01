@@ -44,8 +44,8 @@
     if (!this.pause) {
       var game = this.game;
       if (keysBeingPressed[87]) { game.ship.thrust(0.05); }
-      if (keysBeingPressed[65]) { game.ship.turn(1); }
-      if (keysBeingPressed[68]) { game.ship.turn(-1); }
+      if (keysBeingPressed[65]) { game.ship.turn(-1); }
+      if (keysBeingPressed[68]) { game.ship.turn(1); }
       if (keysBeingPressed[32]) { game.ship.fireBullet(); }
     }
   };

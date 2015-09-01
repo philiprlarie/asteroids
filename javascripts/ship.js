@@ -62,9 +62,7 @@
 
     ctx.save();
     ctx.translate(this.pos[0], this.pos[1]);
-    // what is the size?
     ctx.rotate(this.faceDir - Math.PI/2);
-    // then draw the image back and up
     ctx.drawImage(shipImg, -25, -25, 50, 50);
     ctx.restore();
   };

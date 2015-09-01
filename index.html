@@ -29,5 +29,14 @@
       new GameView(new Asteroids.Game(), canvasEl).start();
     </script>
 
+    <script>
+      Asteroids.replay = function () {
+        $("#game-screen").html("<div class='game-over-message'></div>");
+        $("#game-screen").append('<canvas id="game-canvas" width="1000px" height="700px"></canvas>');
+        var canvasEl = document.getElementById("game-canvas");
+        new GameView(new Asteroids.Game(), canvasEl).start();
+      }
+    </script>
+
   </body>
 </html>
