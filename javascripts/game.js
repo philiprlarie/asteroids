@@ -26,7 +26,9 @@
     this.allObjects().forEach(function (movingObject) {
       movingObject.draw(ctx);
     });
-    $('#score').html('The score is ' + this.score);
+    var score = this.score[0]*1000 + this.score[0]*500;
+    $('#score').html('Score: ' + score);
+    $('#round').html('Round: ' + this.round);
   };
 
   Game.prototype.step = function() {

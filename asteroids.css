@@ -1,3 +1,9 @@
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 header {
   margin-top: 30px;
   background-color: black;
@@ -13,9 +19,20 @@ body {
   text-align: center;
 }
 
-#score {
+#score-bar {
   background: black;
   font-size: 40px;
+  border-radius: 20px 20px 0 0;
+}
+
+#score {
+  float: left;
+  margin-left: 20px;
+}
+
+#round {
+  float: right;
+  margin-right: 20px;
 }
 
 .game-over-message {
