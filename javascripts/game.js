@@ -4,20 +4,21 @@
   }
 
   var Game = Asteroids.Game = function () {
+    this.round = 1;
+    this.gameOver = false;
     this.asteroids = [];
     this.bullets = [];
-    this.addAsteroids();
+    this.addAsteroids(this.round);
     this.ship = new Asteroids.Ship({
       'pos': [Game.DIM_X/2, Game.DIM_Y/2],
       'game': this
     });
     this.score = [0,0]; // [big asteroids killed, small asteroids killed]
-    this.gameOver = false;
   };
 
   Game.DIM_X = 1000;
   Game.DIM_Y = 700;
-  Game.NUM_ASTEROIDS = 40;
+  Game.NUM_ASTEROIDS = 5;
 
   Game.prototype.draw = function (ctx, img) {
     ctx.clearRect(0, 0, Game.DIM_X, Game.DIM_Y);
@@ -45,8 +46,8 @@
     return this.asteroids.concat(this.bullets).concat([this.ship]);
   };
 
-  Game.prototype.addAsteroids = function () {
-    for (var i = 0; i < Game.NUM_ASTEROIDS; i++) {
+  Game.prototype.addAsteroids = function (round) {
+    for (var i = 0; i < Game.NUM_ASTEROIDS * round; i++) {
       this.asteroids.push(new Asteroids.Asteroid({ 'game': this }));
     }
   };
@@ -127,6 +128,11 @@
       if (idx != -1) {
         this.bullets.splice(idx, 1);
       }
+    }
+
+    if (this.asteroids.length === 0) {
+      this.round += 1;
+      this.addAsteroids(this.round);
     }
   };
 
