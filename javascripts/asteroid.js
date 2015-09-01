@@ -4,9 +4,14 @@
   }
 
   var Asteroid = Asteroids.Asteroid = function (asteroidParams) {
+    var speed = Asteroids.Utils.normalDist();
+    if (Math.abs(speed) < 1) {
+      speed = 1;
+    }
+
     Asteroids.MovingObject.call(this, {
       'pos': asteroidParams.pos || Asteroids.Utils.randomEdgePos(),
-      'vel': asteroidParams.vel || Asteroids.Utils.randomVec(1 + 2 * (Asteroids.Utils.normalDist())),
+      'vel': asteroidParams.vel || Asteroids.Utils.randomVec(speed),
       'radius': asteroidParams.radius || Asteroid.BIG_RADIUS,
       'game': asteroidParams.game,
       'faceDir': Math.PI/2
