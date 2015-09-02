@@ -26,7 +26,7 @@
     this.allObjects().forEach(function (movingObject) {
       movingObject.draw(ctx);
     });
-    var score = this.score[0]*1000 + this.score[0]*500;
+    var score = this.score[0]*1000 + this.score[1]*500;
     $('#score').html('Score: ' + score);
     $('#round').html('Round: ' + this.round);
   };
