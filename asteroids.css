@@ -35,7 +35,7 @@ body {
   margin-right: 20px;
 }
 
-.game-over-message {
+.game-message {
   font-size: 40px;
   position: absolute;
   background: black;
@@ -47,6 +47,10 @@ body {
 }
 
 #game-over {
+  margin: 20px;
+}
+
+#pause {
   margin: 20px;
 }
 

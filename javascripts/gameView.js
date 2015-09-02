@@ -25,8 +25,13 @@
 
       // pause functionality
       if (e.keyCode == 27 && e.type == 'keydown') {
-        if (gameView.pause) {gameView.pause = false; }
-        else { gameView.pause = true; }
+        if (gameView.pause) {
+          gameView.pause = false;
+          $('.pause-message').html("");
+        } else {
+          gameView.pause = true;
+          $('.pause-message').html("<div id='pause'>Paused</div>");
+        }
       }
     };
 
