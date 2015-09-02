@@ -30,8 +30,10 @@
         <div id="score"></div>
         <div id="round"></div>
       </div>
-      <div class="game-over-message"></div>
-      <canvas id="game-canvas" width="1000px" height="700px"></canvas>
+      <div id="playing-board">
+        <div class="game-over-message"></div>
+        <canvas id="game-canvas" width="1000px" height="700px"></canvas>
+      </div>
     </div>
 
     <script>
@@ -41,8 +43,8 @@
 
     <script>
       Asteroids.replay = function () {
-        $("#game-screen").html("<div class='game-over-message'></div>");
-        $("#game-screen").append('<canvas id="game-canvas" width="1000px" height="700px"></canvas>');
+        $("#playing-board").html("<div class='game-over-message'></div>");
+        $("#playing-board").append('<canvas id="game-canvas" width="1000px" height="700px"></canvas>');
         var canvasEl = document.getElementById("game-canvas");
         new GameView(new Asteroids.Game(), canvasEl).start();
       }

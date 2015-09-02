@@ -9,7 +9,7 @@
       'vel': [0, 0],
       'radius': Ship.RADIUS,
       'game': shipParams.game,
-      'faceDir': Math.PI/2,
+      'faceDir': -Math.PI/2,
     });
     this.reloading = false; // no firing while reloading is true
   };
