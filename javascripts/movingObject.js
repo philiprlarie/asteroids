@@ -13,7 +13,6 @@
     this.faceDir = params.faceDir;
   };
 
-  // TODO make the drawing more cooler
   MovingObject.prototype.draw = function (ctx) {
     ctx.beginPath();
 

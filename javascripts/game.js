@@ -82,9 +82,6 @@
   };
 
   Game.prototype.remove = function(object) {
-    // TODO logic about adding more asteroids when some are taken away
-    // TODO make cooler new velocity that takes into account bullet velocity
-    // TODO refactor this to grab math stuff into utils
 
     var idx;
 
@@ -97,7 +94,6 @@
         } else if (object.radius === Asteroids.Asteroid.BIG_RADIUS) {
           this.score[0] += 1;
 
-          ////////////////////// refactor this
           var leftVel = [1/Math.sqrt(2) * object.vel[0] - 1/Math.sqrt(2) * object.vel[1],
                          1/Math.sqrt(2) * object.vel[0] + 1/Math.sqrt(2) * object.vel[1]];
           var leftParams = {
@@ -122,7 +118,6 @@
 
           this.add(leftAsteroid);
           this.add(rightAsteroid);
-          ////////////////////////
         }
       }
     } else if (object instanceof Asteroids.Bullet) {

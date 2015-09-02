@@ -1,0 +1,4 @@
+.DS_Store
+
+# Ignore concerns
+concerns.md
