@@ -50,7 +50,12 @@ body {
   margin: 20px;
 }
 
+.game-over-message {
+  z-index: 2;
+}
+
 #pause {
+  z-index: 1;
   margin: 20px;
 }
 

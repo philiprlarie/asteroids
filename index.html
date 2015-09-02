@@ -44,7 +44,8 @@
 
     <script>
       Asteroids.replay = function () {
-        $("#playing-board").html("<div class='game-over-message'></div>");
+        $("#playing-board").html("<div class='game-over-message game-message'></div>");
+        $("#playing-board").append("<div class='pause-message game-message'></div>");
         $("#playing-board").append('<canvas id="game-canvas" width="1000px" height="700px"></canvas>');
         var canvasEl = document.getElementById("game-canvas");
         new GameView(new Asteroids.Game(), canvasEl).start();
